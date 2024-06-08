@@ -7,4 +7,6 @@ toggleterm.setup({
 	open_mapping = [[<c-\>]],
 	direction = "horizontal",
 	close_on_exit = true,
+	shade_terminals = false,
+	persist_mode = false,
 })

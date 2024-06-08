@@ -71,4 +71,6 @@ lazy.setup({
 		version = "*",
 		config = true,
 	},
+
+	"goolord/alpha-nvim", -- start screen
 })
