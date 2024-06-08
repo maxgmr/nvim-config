@@ -31,3 +31,9 @@ conform.setup({
 		sql = { "sqlfluff" },
 	},
 })
+
+conform.formatters.csharpier = {
+	inherit = false,
+	command = "dotnet",
+	args = { "csharpier" },
+}
