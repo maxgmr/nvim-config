@@ -122,6 +122,8 @@ end
 
 local footers = {
 	centre_align({
+		[[]],
+		[[]],
 		[[Love is patient;]],
 		[[love is kind;]],
 		[[love is not envious or boastful or arrogant or rude.]],
@@ -135,6 +137,8 @@ local footers = {
 		[[- 1 Corinthians 13:4-7]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[So whenever you give alms, do not sound a trumpet before you,]],
 		[[as the hypocrites do in the synagogues and in the streets,]],
 		[[so that they may be praised by others.]],
@@ -145,6 +149,8 @@ local footers = {
 		[[- Matthew 6:2-4]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[Have you not known? Have you not heard?]],
 		[[The LORD is the everlasting God,]],
 		[[the Creator of the ends of the earth.]],
@@ -161,6 +167,8 @@ local footers = {
 		[[- Isaiah 40:28-35]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[Do not fear, for I am with you,]],
 		[[do not be afraid, for I am your God;]],
 		[[I will strengthen you, I will help you,]],
@@ -168,6 +176,8 @@ local footers = {
 		[[- Isaiah 41:10]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[I know that whatever God does endures for ever;]],
 		[[nothing can be added to it, nor anything taken from it;]],
 		[[God has done this, so that all should stand in awe before him.]],
@@ -177,7 +187,8 @@ local footers = {
 		[[- Ecclesiastes 3:14-15]],
 	}),
 	centre_align({
-
+		[[]],
+		[[]],
 		[[Let the heavens be glad, and let the earth rejoice;]],
 		[[let the sea roar, and all that fills it;]],
 		[[let the field exult, and everything in it.]],
@@ -189,6 +200,8 @@ local footers = {
 		[[- Psalms 96:12-13]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[The steadfast love of the LORD never ceases,]],
 		[[his mercies never come to an end;]],
 		[[they are new every morning;]],
@@ -196,11 +209,15 @@ local footers = {
 		[[- Lamentations 3:22-23]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[For God so loved the world that he gave his only Son, so that everyone]],
 		[[who believes in him may not perish but may have eternal life.]],
 		[[- John 3:16]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[Indeed, rarely will anyone die for a righteous person—though perhaps]],
 		[[for a good person someone might actually dare to die.]],
 		[[But God proves his love for us in that while we still were sinners]],
@@ -208,6 +225,8 @@ local footers = {
 		[[- Romans 5:7-8]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[Do not be conformed to this world,]],
 		[[but be transformed by the renewing of your minds,]],
 		[[so that you may discern what is the will of God—]],
@@ -215,29 +234,40 @@ local footers = {
 		[[- Romans 12:2]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[Come to me, all you that are weary and are carrying heavy burdens,]],
 		[[and I will give you rest. ]],
 		[[- Matthew 11:28]],
 	}),
 	centre_align({
+		[[]],
+		[[]],
 		[[In the beginning when God created the heavens and the earth,]],
 		[[the earth was a formless void and darkness covered the face of the deep,]],
 		[[while a wind from God swept over the face of the waters.]],
 		[[Then God said, ‘Let there be light’; and there was light. ]],
 		[[- Genesis 1:1-3]],
 	}),
-	"~ Max s Michayla ~",
+	{ [[]], [[]], "~ Max s Michayla ~" },
 }
 
 dashboard.section.header.val = headers[math.random(#headers)]
+dashboard.section.header.opts = {
+	hl = "GruvboxBlue",
+	position = "center",
+}
+
 dashboard.section.buttons.val = {
 	dashboard.button("o", "  > Open Current Directory", ":e .<CR>"),
 	dashboard.button("f", "  > Find File", ":cd $HOME | Telescope find_files<CR>"),
 	dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
 	dashboard.button("q", "󰩈  > Quit", ":qa<CR>"),
 }
+
 dashboard.section.footer.val = footers[math.random(#footers)]
 dashboard.section.footer.opts = {
+	hl = "GruvboxPurple",
 	position = "center",
 }
 
