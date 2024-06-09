@@ -23,7 +23,8 @@ local servers = {
 	"somesass_ls", -- sass
 	"taplo", -- toml
 	"lemminx", -- xml
-	"gitlab_ci_ls", -- yaml
+	-- "gitlab_ci_ls", -- yaml
+	"yamlls", -- yaml
 }
 
 local mason_status_ok, mason = pcall(require, "mason")
