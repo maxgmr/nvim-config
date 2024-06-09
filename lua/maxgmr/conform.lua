@@ -29,6 +29,7 @@ conform.setup({
 		cs = { "csharpier" },
 		xml = { "xmllint" },
 		sql = { "sqlfluff" },
+		yaml = { "yamlfmt" },
 	},
 })
 
