@@ -63,3 +63,9 @@ end, { desc = "close buffer" })
 
 -- (conform) show info
 keymap("n", "<leader>ci", ":ConformInfo<CR>", opts)
+-- (conform) disable format on save for current buffer
+keymap("n", "<leader>df", ":FormatDisable<CR>", opts)
+-- (conform) disable format on save globally
+keymap("n", "<leader>dF", ":FormatDisable!<CR>", opts)
+-- (conform) enable format on save globally
+keymap("n", "<leader>ef", ":FormatEnable<CR>", opts)
