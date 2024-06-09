@@ -21,11 +21,18 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- PLUGIN KEYMAPS
--- (telescope) open telescope
+-- (telescope) find files
 keymap(
 	"n",
 	"<leader>f",
 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = true }))<CR>",
+	opts
+)
+-- (telescope) live grep
+keymap(
+	"n",
+	"<leader>lg",
+	"<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({ previewer = true }))<CR>",
 	opts
 )
 

@@ -19,6 +19,9 @@ if not status_ok then
 	return
 end
 
+local fzf_native_build =
+	"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build"
+
 -- install/load plugins
 lazy.setup({
 	"folke/lazy.nvim", -- self-maintain
@@ -50,6 +53,10 @@ lazy.setup({
 	},
 
 	"nvim-telescope/telescope.nvim", -- enable telescope
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build = fzf_native_build,
+	},
 
 	{
 		"nvim-treesitter/nvim-treesitter", -- enable syntax highlighting
