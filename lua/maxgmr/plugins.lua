@@ -31,7 +31,7 @@ lazy.setup({
 	"hrsh7th/cmp-nvim-lsp", -- lsp completion
 	"hrsh7th/cmp-buffer", -- buffer completion
 	"hrsh7th/cmp-path", -- path completion
-	-- "hrsh7th/cmp-cmdline",                          -- snippet completion
+	-- "hrsh7th/cmp-cmdline", -- snippet completion
 	"hrsh7th/cmp-nvim-lua", -- nvim's lua api
 
 	"saecki/crates.nvim", -- crates.io deps completion
@@ -65,6 +65,7 @@ lazy.setup({
 	"nvim-tree/nvim-tree.lua", -- file tree browser
 
 	"willothy/nvim-cokeline", -- buffer line
+	"nvim-lualine/lualine.nvim", -- bottom status line
 
 	{
 		"akinsho/toggleterm.nvim", -- terminal
