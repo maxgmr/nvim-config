@@ -83,4 +83,7 @@ lazy.setup({
 	"lewis6991/gitsigns.nvim", -- git line decorations
 
 	"goolord/alpha-nvim", -- start screen
+
+	"uga-rosa/utf8.nvim", -- utf-8 support
+	"cosmicboots/unicode_picker.nvim", -- unicode character picker
 })
