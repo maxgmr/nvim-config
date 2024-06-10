@@ -30,6 +30,18 @@ lazy.setup({
 
 	"ellisonleao/gruvbox.nvim", -- colour scheme
 
+	{
+		"vhyrro/luarocks.nvim", -- luarocks
+		priority = 1000, -- very high priority required; luarocks.nvim must be first plugin in config
+		config = true, -- auto setup config
+	},
+	{
+		"nvim-neorg/neorg",
+		dependencies = { "luarocks.nvim" },
+		lazy = false,
+		version = "*", -- pin neorg to latest stable release
+	},
+
 	"hrsh7th/nvim-cmp", -- completion plugin
 	"hrsh7th/cmp-nvim-lsp", -- lsp completion
 	"hrsh7th/cmp-buffer", -- buffer completion
