@@ -6,6 +6,21 @@ if not ok_status then
 	return
 end
 
+local the_eye = function()
+	local bufnr = vim.api.nvim_get_current_buf()
+	if vim.g.disable_autoformat ~= nil then
+		if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+			return globals.the_not_so_all_seeing_eye
+		else
+			return globals.the_all_seeing_eye
+		end
+	else
+		return ""
+	end
+end
+
+the_eye()
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
@@ -28,10 +43,17 @@ lualine.setup({
 	sections = {
 		lualine_a = {
 			{
-				"mode",
-				icons_enabled = true,
-				icon = "", -- removing this icon may cause anomalous events.
+				the_eye,
+				component_separators = {
+					left = "",
+					right = "",
+				},
+				padding = {
+					left = 1,
+					right = 0,
+				},
 			},
+			"mode",
 		},
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = {

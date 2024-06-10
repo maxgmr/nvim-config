@@ -1,4 +1,6 @@
 return {
+	the_all_seeing_eye = "",
+	the_not_so_all_seeing_eye = "",
 	error_symbol = "󰈸",
 	warning_symbol = "󰞴",
 	hint_symbol = "",
