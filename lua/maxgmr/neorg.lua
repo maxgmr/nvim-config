@@ -4,4 +4,17 @@ if not status_ok then
 	return
 end
 
-neorg.setup()
+neorg.setup({
+	load = {
+		-- load modules
+		-- default options
+		["core.defaults"] = {},
+		-- beautified plaintext w icons
+		["core.concealer"] = {
+			config = {
+				folds = false,
+				icon_preset = "basic",
+			},
+		},
+	},
+})
