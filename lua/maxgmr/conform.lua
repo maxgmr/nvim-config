@@ -26,6 +26,7 @@ conform.setup({
 		bash = { "shfmt" },
 		toml = { "taplo" },
 		css = { "prettierd" },
+		scss = { "prettierd" },
 		rust = { "rustfmt" },
 		python = { "black" },
 		c = { "clang-format" },
