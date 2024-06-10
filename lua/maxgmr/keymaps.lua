@@ -69,3 +69,6 @@ keymap("n", "<leader>df", ":FormatDisable<CR>", opts)
 keymap("n", "<leader>dF", ":FormatDisable!<CR>", opts)
 -- (conform) enable format on save globally
 keymap("n", "<leader>ef", ":FormatEnable<CR>", opts)
+
+-- (unicode_picker) pick a unicode character with telescope
+vim.keymap.set("i", "<C-j>", require("unicode_picker").unicode_chars, opts)
