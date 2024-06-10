@@ -40,7 +40,7 @@ keymap(
 keymap("n", "<leader>o", ":NvimTreeToggle<CR>", opts)
 
 -- (lazy) update packages
-keymap("n", "<leader>u", ":Lazy update<CR>", opts)
+keymap("n", "<leader>U", ":Lazy update<CR>", opts)
 -- (lazy) open Lazy
 keymap("n", "<leader>L", ":Lazy<CR>", opts)
 
