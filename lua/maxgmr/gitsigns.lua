@@ -6,6 +6,27 @@ if not status_ok then
 	return
 end
 
+-- keybindings for gitsigns
+local gitsigns_bindings = function(bufnr)
+	-- jump to next hunk
+	vim.keymap.set("n", "]c", function()
+		if vim.wo.diff then
+			vim.cmd.normal({ "]c", bang = true })
+		else
+			gitsigns.nav_hunk("next")
+		end
+	end)
+
+	-- jump to prev hunk
+	vim.keymap.set("n", "[c", function()
+		if vim.wo.diff then
+			vim.cmd.normal({ "[c", bang = true })
+		else
+			gitsigns.nav_hunk("prev")
+		end
+	end)
+end
+
 gitsigns.setup({
 	signs = {
 		add = { text = globals.git_add_symbol },
@@ -40,7 +61,7 @@ gitsigns.setup({
 	sign_priority = 6,
 	update_debounce = 100,
 	status_formatter = nil, -- Use default
-	max_file_length = 99999, -- Disable if file is longer than this (in lines)
+	max_file_length = 131072, -- Disable if file is longer than this (in lines)
 	preview_config = {
 		-- Options passed to nvim_open_win
 		border = "single",
@@ -49,4 +70,5 @@ gitsigns.setup({
 		row = 0,
 		col = 1,
 	},
+	on_attach = gitsigns_bindings,
 })
