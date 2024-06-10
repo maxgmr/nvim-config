@@ -32,8 +32,8 @@ conform.setup({
 		scss = { "prettierd" },
 		rust = { "rustfmt" },
 		python = { "black" },
-		c = { "clang-format" },
-		cpp = { "clang-format" },
+		c = { "clang_format" },
+		cpp = { "clang_format" },
 		cs = { "csharpier" },
 		xml = { "xmllint" },
 		sql = { "sqlfluff" },
@@ -45,6 +45,10 @@ conform.formatters.csharpier = {
 	inherit = false,
 	command = "dotnet",
 	args = { "csharpier" },
+}
+
+conform.formatters.clang_format = {
+	args = { "--style={BasedOnStyle: llvm, IndentWidth: 4}" },
 }
 
 -- command to disable format on save
