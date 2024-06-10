@@ -7,4 +7,10 @@ return {
 	readonly_symbol = "󰌾",
 	unnamed_symbol = "",
 	newfile_symbol = "",
+	git_add_symbol = "┃",
+	git_change_symbol = "┃",
+	git_delete_symbol = "_",
+	git_topdelete_symbol = "‾",
+	git_changedelete_symbol = "~",
+	git_untracked_symbol = "┆",
 }

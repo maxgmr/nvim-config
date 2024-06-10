@@ -1,3 +1,5 @@
+local globals = require("globals")
+
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
 	vim.notify("ERROR: Failed to load gitsigns.")
@@ -6,18 +8,19 @@ end
 
 gitsigns.setup({
 	signs = {
-		add = { text = "┃" },
-		change = { text = "┃" },
-		delete = { text = "_" },
-		topdelete = { text = "‾" },
-		changedelete = { text = "~" },
-		untracked = { text = "┆" },
+		add = { text = globals.git_add_symbol },
+		change = { text = globals.git_change_symbol },
+		delete = { text = globals.git_delete_symbol },
+		topdelete = { text = globals.git_topdelete_symbol },
+		changedelete = { text = globals.git_changedelete_symbol },
+		untracked = { text = globals.git_untracked_symbol },
 	},
 	signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
 	numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
 	linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
 	word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
 	watch_gitdir = {
+		interval = 1000,
 		follow_files = true,
 	},
 	auto_attach = true,
@@ -37,7 +40,7 @@ gitsigns.setup({
 	sign_priority = 6,
 	update_debounce = 100,
 	status_formatter = nil, -- Use default
-	max_file_length = 40000, -- Disable if file is longer than this (in lines)
+	max_file_length = 99999, -- Disable if file is longer than this (in lines)
 	preview_config = {
 		-- Options passed to nvim_open_win
 		border = "single",
