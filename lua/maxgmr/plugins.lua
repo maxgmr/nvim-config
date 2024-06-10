@@ -80,5 +80,7 @@ lazy.setup({
 		config = true,
 	},
 
+	"lewis6991/gitsigns.nvim", -- git line decorations
+
 	"goolord/alpha-nvim", -- start screen
 })
